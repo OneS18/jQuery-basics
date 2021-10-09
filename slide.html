@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <script src="/js/jquery.js"></script>
+
+    <script>
+      $("document").ready(function () {
+        $("#slide-up").click(() => {
+          $("#textBox").slideUp("2000", "linear");
+        });
+        $("#slide-down").click(() => {
+          $("#textBox").slideDown("fast", "linear");
+        });
+        $("#toggleSlide").click(() => {
+          $("#textBox").slideToggle("2000", () => {
+            alert("succed");
+          });
+        });
+      });
+    </script>
+    <style>
+      #textBox {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" id="slide-up">slide up</a> |
+    <a href="#" id="slide-down">Slide down</a> |
+    <a href="#" id="toggleSlide">Toggle</a>
+
+    <div id="textBox">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi
+      dolore et velit. Necessitatibus perferendis dolorum voluptates dolorem
+      eligendi quibusdam, incidunt explicabo laboriosam! Eius eligendi commodi
+      quisquam id at. Ullam?
+    </div>
+  </body>
+</html>

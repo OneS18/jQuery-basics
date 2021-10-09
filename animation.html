@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <script src="/js/jquery.js"></script>
+
+    <script>
+      $("document").ready(function () {
+        $("#grow").click(() => {
+          $("#textBox").animate({ width: "500px" }, 2000);
+        });
+        $("#move").click(() => {
+          $("#textBox").animate({ marginLeft: "200px" }, 500);
+        });
+        $("#bigger").click(() => {
+          $("#textBox").animate({ fontSize: "40px" }, 1000);
+        });
+        $("#many").click(() => {
+          $("#textBox").animate(
+            { fontSize: "40px", marginLeft: "400px", width: "600px" },
+            2000
+          );
+        });
+      });
+    </script>
+    <style>
+      #textBox {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        position: absolute;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" id="grow">Grow</a> | <a href="#" id="move">Move</a> |
+    <a href="#" id="bigger">Bigger</a> |
+    <a href="#" id="many">Many Things</a>
+
+    <div id="textBox">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi
+      dolore et velit. Necessitatibus perferendis dolorum voluptates dolorem
+      eligendi quibusdam, incidunt explicabo laboriosam! Eius eligendi commodi
+      quisquam id at. Ullam?
+    </div>
+  </body>
+</html>
